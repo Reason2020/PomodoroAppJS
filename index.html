@@ -5,29 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer - Vanilla JS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <h1>Pomo<span>Doro.</span></h1>
+    <nav class="navbar flex">
+        <h1>PomoDoro.</h1>
     </nav>
 
     <main class="main">
-        <div class="mini--navmenu">
-            <ul class="mini--navmenu__list">
-                <li class="mini--navmenu__list__item"><a href="#">Engage</a></li>
-                <li class="mini--navmenu__list__item"><a href="#">Short Break</a></li>
-                <li class="mini--navmenu__list__item"><a href="#">Long Break</a></li>
-            </ul>
-        </div>
+        <div class="container">
+            <div class="mini--navmenu">
+                <ul class="mini--navmenu__list">
+                    <li class="mini--navmenu__list__item"><a href="#" class="active--item">Engage</a></li>
+                    <li class="mini--navmenu__list__item"><a href="#">Short Break</a></li>
+                    <li class="mini--navmenu__list__item"><a href="#">Long Break</a></li>
+                </ul>
+            </div>
 
-        <div class="time--container">
-            <h2>07 : 37</h2>
-        </div>
+            <div class="time--container">
+                <h2><span class="time--container__minutes">07</span> : <span class="time--container__seconds">37</span></h2>
+            </div>
 
-        <div class="buttons--list">
-            <button class="btn btn--start">Start</button>
-            <button class="btn btn--stop">Stop</button>
-            <button class="btn btn--reset">Reset</button>
+            <div class="buttons--list">
+                <button class="btn btn--start">Start</button>
+                <button class="btn btn--stop">Stop</button>
+                <button class="btn btn--reset">Reset</button>
+            </div>
         </div>
     </main>
 </body>
