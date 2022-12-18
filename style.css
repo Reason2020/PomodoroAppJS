@@ -42,13 +42,13 @@ body {
 .mini--navmenu__list__item {
     list-style: none;
     /* height: 100%; */
-    /* border: 1px solid red; */
-    padding: 1.5em 2.5em;
+    border: 1px solid red;
+    padding: 1.5em;
     width: 100%;
 }
 
 .active--item{
-    color: #29292b;
+    /* color: #29292b; */
     background-color: #faf9f5;
 }
 

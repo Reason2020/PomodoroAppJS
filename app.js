@@ -4,8 +4,20 @@ window.addEventListener('DOMContentLoaded', event => {
     const startBtn = document.querySelector('.btn--start');
     const stopBtn = document.querySelector('.btn--stop');
     const resetBtn = document.querySelector('.btn--reset');
+    let activeItem = document.querySelector('.active--item');
     const sound = new Audio('/sound.wav');
+    const periods = document.querySelectorAll('li');
+    // console.log(periods);
 
+    periods.forEach(period => {
+        period.addEventListener('click', event => {
+            activeItem.classList.remove('active--item');
+            period.classList.add('active--item');
+            activeItem = period;
+            setTimeLeft();
+            displayTime(timeLeft);
+        });
+    });
 
     function displayTime (timeLeft) {
         let minutesLeft = Math.floor(timeLeft / 60);
@@ -24,11 +36,22 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     //Initial State
-    let timeLeft = 900;
+    let timeLeft;
+    function setTimeLeft () {
+        if (activeItem.dataset.property === "engage") {
+            timeLeft = 2700;
+        } else if (activeItem.dataset.property === "short-break") {
+            timeLeft = 600;
+        } else {
+            timeLeft = 1800;
+        }
+    }
+    setTimeLeft();
+    // console.log(activeItem.dataset.property);
     displayTime(timeLeft);
 
     function initialState() {
-        timeLeft = 900;
+        setTimeLeft();
         displayTime(timeLeft);
     }
 
