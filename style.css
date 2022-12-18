@@ -42,7 +42,7 @@ body {
 .mini--navmenu__list__item {
     list-style: none;
     /* height: 100%; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 1.5em;
     width: 100%;
 }
